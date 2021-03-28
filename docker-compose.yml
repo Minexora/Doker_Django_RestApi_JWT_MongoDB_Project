@@ -1,0 +1,32 @@
+version: '3'
+
+volumes:
+  data-db:
+
+
+services:
+  db:
+    image: mongo:3.4.2
+    restart: always
+    command: mongod
+    volumes:
+      - data-db:/data/db
+      - ./init-db.js:/docker-entrypoint-initdb.d/init-db.js
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: mongoadmin
+      MONGO_INITDB_DATABASE: restApi
+    ports:
+      - 27017:27017
+
+
+  web:
+    build: .
+    # command: python manage.py runserver 0.0.0.0:8000
+    command: bash docker-entrypoint.sh
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
