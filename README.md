@@ -20,7 +20,7 @@ Yeni admin kullanıcı admin panelinden eklenebileceği gibi docker da eklenebir
 docker ps
 ```
         
-2. Container daki bash e bağlanılır. Bunun  için aşağıdaki komutu kullanabilirsiniz.
+2. Container daki bash e bağlanılır. Bunun için aşağıdaki komutu kullanabilirsiniz.
 
 ```
 docker exec -it <container id> /bin/bash
@@ -36,5 +36,22 @@ python manage.py createsuperuser
 
 
 # Api request 
-    
-    * Overview için 
+
+* Overview için aşağıdaki gibi request atılmalıdır.
+
+![alt text](https://github.com/Minexora/Doker_Django_RestApi_JWT_MongoDB_Project/blob/master/api_response_image/overview.png?raw=true)
+
+* Login olmak ve token alma için overviewde bulunan login istekte bulunmalısınız. 
+Eğer token alınmadan istek atılırsa api çalışmayıp response olara 401 Unauthorized dönecektir.
+Aşağıdaki gibi istek atabilirsiniz.
+
+![alt text](https://github.com/Minexora/Doker_Django_RestApi_JWT_MongoDB_Project/blob/master/api_response_image/login.png?raw=true)
+
+* Login olup token alındıktan sonra bu token aşağıdaki gibi request header içine eklenmelidir.
+
+![alt text](https://github.com/Minexora/Doker_Django_RestApi_JWT_MongoDB_Project/blob/master/api_response_image/list.png?raw=true)
+
+* Overviewde bulunan linklere token eklendikten sonra istek atılabilir. 
+Create ve Edit için request body aşağıdaki gibi olmalıdır.
+
+![alt text](https://github.com/Minexora/Doker_Django_RestApi_JWT_MongoDB_Project/blob/master/api_response_image/create.png?raw=true)
