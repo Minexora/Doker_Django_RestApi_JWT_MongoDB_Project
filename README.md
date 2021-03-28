@@ -1,4 +1,7 @@
-# Proje Kurulumu
+# Proje Kurulumu   
+
+[![Build Status](https://travis-ci.com/Minexora/Doker_Django_RestApi_JWT_MongoDB_Project.svg?branch=master)](https://travis-ci.com/Minexora/Doker_Django_RestApi_JWT_MongoDB_Project)
+
 Terminalde aşağıdaki komutu yazarak projeyi ayağa kaldırabilirsiniz.
     
 ```
