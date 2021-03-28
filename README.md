@@ -1,7 +1,7 @@
 # Proje Kurulumu
-    Terminalde aşağıdaki komutu yazarak proje ayağa kaldırılmaktadır.
-    ```bash
-        sudo docker-compose up -d --build
+    Terminalde aşağıdaki komutu yazarak projeyi ayağa kaldırabilirsiniz.
+    ```
+    sudo docker-compose up -d --build
     ```
 
 # Proje default kullanıcısı
@@ -14,25 +14,25 @@
         
         1. Docker containerlar listelenir. Bunun için aşağıdaki komutu kullanalabirsiniz.
         
-        ```bash
+        ```
         docker ps
         ```
         
         2. Container daki bash e bağlanılır. Bunun  için aşağıdaki komutu kullanabilirsiniz.
         
-        ```bash
-            docker exec -it <container id> /bin/bash
+        ```
+        docker exec -it <container id> /bin/bash
         ```
         
-        3. Yeni kullanıcı oluşturulması için aşağıdaki komut kullanılır. İstenilen bilgiler doldurularak
-        yeni kullanıcı oluşturulacaktır.
+        3. Yeni kullanıcı oluşturulması için aşağıdaki komut kullanılır. İstenilen bilgiler 
+        doldurularak yeni kullanıcı oluşturulacaktır.
         
-        ```bash
-            python manage.py createsuperuser
+        ```
+        python manage.py createsuperuser
         ```
     
 
 
 # Api request 
     
-    - Overview için 
+    * Overview için 
